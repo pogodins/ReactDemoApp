@@ -13,5 +13,16 @@ jobs:
           node-version: 16
       - name: Install dependencies
         run: yarn install
+      - name: Install Playwright
+        run: npx playwright install chromium
+      - name: Run system tests
+        run: yarn test:system
+      - name: Upload Playwright results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
       - name: Build application
         run: yarn build
