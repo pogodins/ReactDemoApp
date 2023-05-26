@@ -1,0 +1,19 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} pushed a change 🚀
+on: [push]
+jobs:
+  Test-And-Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Use Node 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: yarn install
+      - name: Run React tests
+        run: yarn test
+      - name: Build application
+        run: yarn build
