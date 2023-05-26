@@ -7,7 +7,7 @@ export default defineConfig({
   // Run all tests in parallel.
   fullyParallel: true,
   // Reporter to use
-  reporter: [['html'], ['list']],
+  reporter: [['html', { open: 'never' }], ['list']],
   use: {
     // Collect trace when retrying the failed test.
     trace: 'retain-on-failure',
@@ -24,6 +24,7 @@ export default defineConfig({
   webServer: {
     command: 'yarn start',
     port: 3000,
-    timeout: 10_000
+    timeout: 10_000,
+    reuseExistingServer: !process.env.CI,
   },
 });
