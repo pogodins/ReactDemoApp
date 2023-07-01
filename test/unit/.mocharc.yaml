@@ -1,0 +1,5 @@
+extension: [ts]
+# file: [tests/api/setup.js]
+require: ['ts-node/register', 'tsconfig-paths/register']
+# reporter: 'mocha-multi-reporters'
+# reporter-option: 'configFile=reporterConfig.json'
