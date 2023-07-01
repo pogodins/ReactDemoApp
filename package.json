@@ -18,8 +18,8 @@
     "build": "react-scripts build",
     "test": "yarn test:unit && yarn test:component && yarn test:system",
     "test:unit": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha 'test/unit/**/*.test.ts' --config test/unit/.mocharc.yaml",
-    "test:component": "playwright test -c playwright-ct.config.ts",
-    "test:system": "playwright test",
+    "test:component": "playwright test -c test/component/playwright.config.ts",
+    "test:system": "playwright test -c test/system/playwright.config.ts",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

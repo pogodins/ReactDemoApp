@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/experimental-ct-react';
-import NoImages from '../components/NoImages';
+import NoImages from '../../src/components/NoImages';
 
 test('No images error is shown', async ({ mount }) => {
     const noImagesComponent = await mount(<NoImages />);
