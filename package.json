@@ -38,8 +38,8 @@
     ]
   },
   "devDependencies": {
-    "@playwright/experimental-ct-react": "1.31.0",
-    "@playwright/test": "1.31.0",
+    "@playwright/experimental-ct-react": "1.35.1",
+    "@playwright/test": "1.35.1",
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
     "chai": "^4.3.7",
