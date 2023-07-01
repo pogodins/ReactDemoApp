@@ -7,9 +7,8 @@ export default defineConfig({
   // Run all tests in parallel.
   fullyParallel: true,
   // Reporter to use
-  reporter: [['html', { open: 'never' }], ['list']],
+  reporter: [['html', { open: 'never', outputFolder: 'playwright-report' }], ['list']],
   use: {
-    // Collect trace when retrying the failed test.
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
   },
