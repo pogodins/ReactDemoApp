@@ -17,6 +17,8 @@ jobs:
         run: yarn test:unit
       - name: Install Playwright
         run: npx playwright install chromium
+      - name: Run component tests
+        run: yarn test:component
       - name: Run system tests
         run: yarn test:system
       - name: Upload Playwright results

@@ -12,12 +12,13 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:unit": "mocha 'test/unit/**/*.test.ts' --config test/unit/.mocharc.yaml",
+    "test": "yarn test:unit && yarn test:component && yarn test:system",
+    "test:unit": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha 'test/unit/**/*.test.ts' --config test/unit/.mocharc.yaml",
+    "test:component": "playwright test -c playwright-ct.config.ts",
     "test:system": "playwright test",
     "eject": "react-scripts eject"
   },
@@ -37,7 +38,8 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.34.3",
+    "@playwright/experimental-ct-react": "1.31.0",
+    "@playwright/test": "1.31.0",
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
     "chai": "^4.3.7",

@@ -9,6 +9,7 @@
 
 # testing
 /coverage
+playwright/.cache
 playwright-report
 test-results
 
