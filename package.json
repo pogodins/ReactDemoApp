@@ -5,10 +5,10 @@
   "homepage": "https://Yog9.github.io/SnapShot",
   "dependencies": {
     "axios": "^0.19.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "5.3.4",
+    "react-scripts": "5.0.1",
     "typescript": "^5.0.4"
   },
   "scripts": {
@@ -38,8 +38,8 @@
     ]
   },
   "devDependencies": {
-    "@playwright/experimental-ct-react": "1.31.0",
-    "@playwright/test": "1.31.0",
+    "@playwright/experimental-ct-react": "1.35.1",
+    "@playwright/test": "1.35.1",
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
     "chai": "^4.3.7",
